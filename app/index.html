@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+		<style>
+			:root {
+				--gray:#3f3f3fff;
+				--light-gray:#3f3f3f80;
+				--light-blue:#a0e0e0ff;
+				--dark-blue:#508090ff;
+				--light-yellow:#fffff5ff;
+			}
+
+			* {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-webkit-user-drag: none;
+				-khtml-user-drag: none;
+				-moz-user-drag: none;
+				-o-user-drag: none;
+				user-drag: none;
+				user-select: none;
+				touch-action: manipulation;
+				box-sizing: border-box;
+				-webkit-tap-highlight-color: transparent;
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100vh;
+				overflow: hidden;
+			}
+
+			.tab {
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100vh;
+				transition: transform 0.5s ease;
+				display: flex;
+				top: 0;
+				transform: translateX(200%);
+			}
+
+			.tab-active {
+				transform: translateX(0);
+			}
+
+			.header {
+				position: absolute;
+				top: 60px;
+				height: 130px;
+				padding: 0 40px 0 40px;
+				width: 100%;
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.menu-bar {
+				position: absolute;
+				right: 40px;
+				top: 65px;
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+
+			.menu-bar > img {
+				width: 40px;
+			}
+
+			.content {
+				width: 100%;
+				padding-top: 140px;
+				overflow-y: scroll;
+				flex-direction: column;
+			}
+
+			.corner {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 115px;
+				height: 140px;
+				border-radius: 0 0 0 25px;
+				background: var(--light-blue);
+				transition: width 0.5s ease;
+			}
+
+			.nav {
+				display: flex;
+				position: fixed;
+				bottom: 0;
+				height: 100px;
+				width: 100%;
+				background: white;
+				align-content: center;
+				align-items: center;
+				justify-content: space-between;
+				padding: 15px 30px;
+			}
+
+			#nav-select {
+				position: absolute;
+				left: 15px;
+				width: 60px;
+				height: 115px;
+				bottom: -30px;
+				background: var(--light-blue);
+				border-radius: 30px;
+				z-index: 0;
+				transition: left 0.5s ease;
+			}
+
+			.nav-select-circle {
+				width: 3.75px;
+				height: 3.75px;
+				margin-left: 50%;
+				margin-top: 62.5px;
+				background-color: var(--dark-blue);
+				border-radius: 50%;
+				z-index: 1;
+			}
+
+			.nav > img {
+				z-index: 1;
+			}
+
+			p, h1 {
+				margin: 0;
+				font-family: 'Poppins', sans-serif;
+			}
+
+			h1 {
+				font-size: 25pt;
+				font-weight: 500;
+				color: var(--gray);
+			}
+
+			.home-card {
+				height: 200px;
+				margin: 20px 30px;
+				padding: 20px 25px;
+				background: var(--light-blue);
+				border-radius: 25px;
+				clip-path: inset(0);
+			}
+
+			.home-card > h1 {
+				color: var(--light-yellow);
+				font-size: 16pt;
+			}
+
+			.home-card#link-account {
+				border: 5px solid var(--dark-blue);
+				background: none;
+			}
+
+			.home-card#link-account > h1 {
+				color: var(--dark-blue);
+				font-size: 16pt;
+				line-height: 25px;
+			}
+
+			.home-card#link-account > button {
+				display: block;
+				background: var(--light-blue);
+				border-radius: 25px;
+				height: 45px;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 500;
+				color: var(--gray);
+				margin-top: 25px;
+				padding: 0 20px;
+				font-size: 10pt;
+				line-height: 25px;
+			}
+
+			#topbar {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: -100%;
+				background: var(--light-blue);
+			}
+
+			.menu-bar > h1 {
+				position: absolute;
+				color: var(--dark-blue);
+				font-size: 12pt;
+				left: -90px;
+				top: -15px;
+			}
+
+			#point-count {
+				margin-top: -10px;
+				font-size: 30pt !important;
+				top: 10px;
+			}
+
+			.rewards-main {
+				width: 100%;
+				padding-top: 140px;
+				overflow-y: scroll;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.reward-item {
+				height: 200px;
+				width: 100px;
+				margin: 20px 30px;
+				padding: 20px 25px;
+				background: white;
+				border-radius: 25px;
+				clip-path: inset(0);
+			}
+
+			.reward-item > .reward-price {
+				width: 100px;
+				height: 50px;
+				font-size: 16pt;
+				color: var(--dark-blue);
+				background: var(--light-blue);
+				border-radius: 25px;
+				padding: 0 20px;
+				line-height: 25px;
+			}
+
+			.reward-item > img {
+				position: absolute;
+				width: 100%;
+				height: fit-content;
+			}
+
+			.reward-item > .reward-title {
+				font-size: 12pt;
+				color: var(--dark-blue);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="topbar"></div>
+		<div class="corner" id="corner">
+			<div class="menu-bar" style="opacity:1;" id="feed-icon"><img src="/app/icon/home.svg" /></div>
+			<div class="menu-bar" id="rewards-icon"><h1>Points</h1><h1 id="point-count">000</h1></div>
+		</div>
+		<div class="tab tab-active" id="feed">
+			<div class="header" id="feed-header"><h1>Hey there!</h1></div>
+			<div class="content" id="feed-main">
+				<div class="home-card" id="link-account">
+					<h1>Link up your<br />account to start<br />earning today</h1>
+					<button>Take me there!</button>
+				</div>
+				<div class="home-card">
+					<h1>Hello</h1>
+				</div>
+				<div class="home-card">
+					<h1>Hello</h1>
+				</div>
+				<div class="home-card">
+					<h1>Hello</h1>
+				</div>
+			</div>
+		</div>
+		<div class="tab" id="rewards">
+			<div class="header" id="rewards-header">
+				<h1>Rewards</h1>
+			</div>
+			<div class="content" id="rewards-main">
+				<div class="reward-item"><h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg"><h1 class="reward-title">Recycled Water<br />Bottle</h1></div>
+				<div class="reward-item">
+					<h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg">
+					<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+				</div>
+				<div class="reward-item item-long">
+					<h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg">
+					<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+				</div>
+			</div>
+		</div>
+		<div class="tab">
+			mo
+		</div>
+		<div class="nav" id = "nav">
+			<div id="nav-select"><div class="nav-select-circle"></div></div>
+			<img style="height:32px;" src="/app/icon/home.svg" ontouchstart = "set_tab(0);" />
+			<img style="height:35px;" src="/app/icon/insights.svg" ontouchstart = "set_tab(1);" />
+			<img style="height:32px;" src="/app/icon/map.svg" ontouchstart = "set_tab(2);" />
+			<img style="height:30px;" src="/app/icon/rewards.svg" ontouchstart = "set_tab(3);" />
+			<img style="height:32px;" src="/app/icon/profile.svg" ontouchstart = "set_tab(4);" />
+		</div>
+		<script>
+			const tabs = [
+				{
+					name: "feed",
+					element: document.getElementById("feed"),
+					icon: document.getElementById("feed-icon"),
+					header: document.getElementById("feed-header"),
+					content: document.getElementById("feed-main"),
+					on_enter: () => {},
+					on_leave: () => {},
+					update: () => {}
+				},
+				{
+					name: "rewards",
+					element: document.getElementById("rewards"),
+					icon: document.getElementById("rewards-icon"),
+					header: document.getElementById("rewards-header"),
+					content: document.getElementById("rewards-main"),
+					on_enter: () => corner.style.width = "160px",
+					on_leave: () => corner.style.width = "115px",
+					update: () => document.getElementById("point-count").innerText = ("000" + points).slice(-3 - Math.round(points / 1000))
+				}
+			];
+
+			const corner = document.getElementById("corner");
+			const nav = document.getElementById("nav");
+			const topbar = document.getElementById("topbar");
+			const nav_select = document.getElementById("nav-select");
+
+			var tab_index = 0;
+			var new_tab_index = 0;
+			var points = 5;
+
+			var tab_on_enter = function (tab) {
+				tab.element.classList.add("tab-active");
+				tab.icon.style.opacity = "1";
+				var prev_transition = tab.element.style.transition;
+				tab.element.style.transition = "transform 0s ease";
+				tab.element.style.transform = tab_index > new_tab_index ? "translateX(-100%)" : "translateX(100%)";
+
+				setTimeout(() => {
+					tab.element.style.transition = prev_transition;
+					tab.element.style.transform = "translateX(0)";
+				}, 1);
+			}
+
+			var nav_on_enter = function(t) {
+				var tab_box = [...nav.childNodes].filter((n) => n.nodeType == Node.ELEMENT_NODE)[t + 1].getBoundingClientRect();
+				nav_select.style.left = `${tab_box.x + tab_box.width / 2 - 30}px`;
+			}
+
+			var tab_on_leave = function (tab) {
+				tab.element.classList.remove("tab-active");
+				tab.element.style.transform = tab_index > new_tab_index ? "translateX(100%)" : "translateX(-100%)";
+				tab.icon.style.opacity = "0";
+			}
+
+			var set_tab = (t) => {
+				var old_tab = tabs[tab_index];
+				var new_tab = tabs[t];
+
+				if (t != tab_index) {
+					tab_on_leave(old_tab);
+					old_tab.on_leave();
+					nav_on_enter(t);
+					tab_on_enter(new_tab);
+					new_tab.on_enter();
+				}
+
+				tab_index = t;
+			}
+			
+			setInterval(update, 0);
+
+			function update() {
+				var content = tabs[tab_index].content;
+				var tab = tabs[tab_index];
+
+				tab.header.style.transform = `translateY(${-content.scrollTop/2}px)`;
+				tab.header.style.opacity = (screen.height/2 - content.scrollTop)/ screen.height*2;
+				corner.style.transform = `translateY(${-content.scrollTop / 2}px)`;
+				nav.style.transform = `translateY(${content.scrollTop > 0 ? content.scrollTop * 2 / 3 : 0}px)`;
+				topbar.style.transform = `translateY(${-content.scrollTop}px)`;
+
+				tab.update();
+			}
+
+			document.body.addEventListener("touchend", (e) => {
+				e.preventDefault();
+			}, false);
+		</script>
+	</body>
+</html>
