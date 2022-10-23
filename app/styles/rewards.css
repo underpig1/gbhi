@@ -1,0 +1,45 @@
+#point-count {
+    margin-top: -10px;
+    font-size: 30pt !important;
+    top: 10px;
+}
+
+.rewards-main {
+    width: 100%;
+    padding-top: 140px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.reward-item {
+    height: 200px;
+    width: 100px;
+    margin: 20px 30px;
+    padding: 20px 25px;
+    background: white;
+    border-radius: 25px;
+    clip-path: inset(0);
+}
+
+.reward-item>.reward-price {
+    width: 100px;
+    height: 50px;
+    font-size: 16pt;
+    color: var(--dark-blue);
+    background: var(--light-blue);
+    border-radius: 25px;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.reward-item>img {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+}
+
+.reward-item>.reward-title {
+    font-size: 12pt;
+    color: var(--dark-blue);
+}
