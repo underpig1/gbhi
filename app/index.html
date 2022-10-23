@@ -1,69 +1,94 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link rel="stylesheet" href="/app/styles/styles.css">
-		<link rel="stylesheet" href="/app/styles/feed.css">
-		<link rel="stylesheet" href="/app/styles/feed.rewards">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div id="topbar"></div>
-		<div class="corner" id="corner">
-			<div class="menu-bar" style="opacity:1;" id="feed-icon"><img src="/app/icon/home.svg" /></div>
-			<div class="menu-bar" id="rewards-icon"><h1>Points</h1><h1 id="point-count">000</h1></div>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>gbhi</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="/app/styles/styles.css">
+	<link rel="stylesheet" href="/app/styles/feed.css">
+	<link rel="stylesheet" href="/app/styles/rewards.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="topbar"></div>
+	<div class="corner" id="corner">
+		<div class="menu-bar" style="opacity:1;" id="feed-icon"><img src="/app/icon/home.svg" /></div>
+		<div class="menu-bar" id="rewards-icon">
+			<h1>Points</h1>
+			<h1 id="point-count">000</h1>
 		</div>
-		<div class="tab tab-active" id="feed">
-			<div class="header" id="feed-header"><h1>Hey there!</h1></div>
-			<div class="content" id="feed-main">
-				<div class="home-card" id="link-account">
-					<h1>Link up your<br />account to start<br />earning today</h1>
-					<button>Take me there!</button>
-				</div>
-				<div class="home-card">
-					<h1>Hello</h1>
-				</div>
-				<div class="home-card">
-					<h1>Hello</h1>
-				</div>
-				<div class="home-card">
-					<h1>Hello</h1>
-				</div>
+	</div>
+	<div class="tab tab-active" id="feed">
+		<div class="header" id="feed-header">
+			<h1>Hey there!</h1>
+		</div>
+		<div class="content" id="feed-main">
+			<div class="home-card" id="link-account">
+				<h1>Link up your<br />account to start<br />earning today</h1>
+				<button>Take me there!</button>
+			</div>
+			<div class="home-card">
+				<h1>Hello</h1>
+			</div>
+			<div class="home-card">
+				<h1>Hello</h1>
+			</div>
+			<div class="home-card">
+				<h1>Hello</h1>
 			</div>
 		</div>
-		<div class="tab" id="rewards">
-			<div class="header" id="rewards-header">
-				<h1>Rewards</h1>
+	</div>
+	<div class="tab" id="rewards">
+		<div class="header" id="rewards-header">
+			<h1>Rewards</h1>
+		</div>
+		<div class="content" id="rewards-main">
+			<div class="reward-item" style="background-image:url('/app/icon/home.svg')">
+				<h1 class="reward-price">1500pts</h1>
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
 			</div>
-			<div class="content" id="rewards-main">
-				<div class="reward-item"><h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg"><h1 class="reward-title">Recycled Water<br />Bottle</h1></div>
-				<div class="reward-item">
-					<h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg">
-					<h1 class="reward-title">Recycled Water<br />Bottle</h1>
-				</div>
-				<div class="reward-item item-long">
-					<h1 class="reward-price">1500pts</h1><img src="/app/icon/home.svg">
-					<h1 class="reward-title">Recycled Water<br />Bottle</h1>
-				</div>
+			<div class="reward-item">
+				<h1 class="reward-price">1500pts</h1>
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+			</div>
+			<div class="reward-item item-long">
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+				<h1 class="reward-price">1500pts</h1>
+			</div>
+			<div class="reward-item">
+				<h1 class="reward-price">1500pts</h1>
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+			</div>
+			<div class="reward-item">
+				<h1 class="reward-price">1500pts</h1>
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+			</div>
+			<div class="reward-item item-long">
+				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
+				<h1 class="reward-price">1500pts</h1>
 			</div>
 		</div>
-		<div class="tab">
-			mo
+	</div>
+	<div class="tab">
+		mo
+	</div>
+	<div class="nav" id="nav">
+		<div id="nav-select">
+			<div class="nav-select-circle"></div>
 		</div>
-		<div class="nav" id = "nav">
-			<div id="nav-select"><div class="nav-select-circle"></div></div>
-			<img style="height:32px;" src="/app/icon/home.svg" ontouchstart = "set_tab(0);" />
-			<img style="height:35px;" src="/app/icon/insights.svg" ontouchstart = "set_tab(1);" />
-			<img style="height:32px;" src="/app/icon/map.svg" ontouchstart = "set_tab(2);" />
-			<img style="height:30px;" src="/app/icon/rewards.svg" ontouchstart = "set_tab(3);" />
-			<img style="height:32px;" src="/app/icon/profile.svg" ontouchstart = "set_tab(4);" />
-		</div>
-		<script src="/app/index.js"></script>
-	</body>
+		<img style="height:32px;" src="/app/icon/home.svg" ontouchstart="set_tab(0);" />
+		<img style="height:35px;" src="/app/icon/insights.svg" ontouchstart="set_tab(1);" />
+		<img style="height:32px;" src="/app/icon/map.svg" ontouchstart="set_tab(2);" />
+		<img style="height:30px;" src="/app/icon/rewards.svg" ontouchstart="set_tab(3);" />
+		<img style="height:32px;" src="/app/icon/profile.svg" ontouchstart="set_tab(4);" />
+	</div>
+	<script src="/app/index.js"></script>
+</body>
+
 </html>

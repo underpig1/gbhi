@@ -4,42 +4,59 @@
     top: 10px;
 }
 
-.rewards-main {
-    width: 100%;
-    padding-top: 140px;
-    overflow-y: scroll;
+#rewards-main {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 150px;
+    align-items: stretch;
 }
 
 .reward-item {
+    flex-grow: 1;
     height: 200px;
-    width: 100px;
-    margin: 20px 30px;
-    padding: 20px 25px;
+    width: 140px;
+    margin: 10px;
     background: white;
     border-radius: 25px;
-    clip-path: inset(0);
+    box-shadow: 0 10px 15px #00000011;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .reward-item>.reward-price {
-    width: 100px;
-    height: 50px;
-    font-size: 16pt;
+    font-size: 14pt;
+    margin: 20px;
     color: var(--dark-blue);
-    background: var(--light-blue);
-    border-radius: 25px;
-    padding: 0 20px;
-    line-height: 25px;
-}
-
-.reward-item>img {
-    position: absolute;
-    width: 100%;
-    height: fit-content;
 }
 
 .reward-item>.reward-title {
-    font-size: 12pt;
+    font-size: 10pt;
+    margin: 20px;
+    margin-top: 95px;
     color: var(--dark-blue);
+    line-height: 18px;
+}
+
+.item-long {
+    flex-grow: 2 !important;
+    min-width: 90%;
+}
+
+.item-long>.reward-title {
+    font-size: 12pt;
+    margin: 20px;
+    line-height: 20px;
+}
+
+.item-long>.reward-price {
+    width: 100px;
+    height: 40px;
+    font-size: 12pt;
+    margin: 10px;
+    margin-top: 90px;
+    background: var(--light-blue);
+    border-radius: 25px;
+    padding: 7px 20px;
 }

@@ -15,9 +15,12 @@ const tabs = [
         icon: document.getElementById("rewards-icon"),
         header: document.getElementById("rewards-header"),
         content: document.getElementById("rewards-main"),
-        on_enter: () => corner.style.width = "160px",
+        on_enter: () => {
+            corner.style.width = "160px";
+            populate_points();
+        },
         on_leave: () => corner.style.width = "115px",
-        update: () => document.getElementById("point-count").innerText = ("000" + points).slice(-3 - Math.round(points / 1000))
+        update: () => document.getElementById("point-count").innerText = ("000" + points).slice(-3 - parseInt(points / 1000))
     }
 ];
 
@@ -28,7 +31,10 @@ const nav_select = document.getElementById("nav-select");
 
 var tab_index = 0;
 var new_tab_index = 0;
-var points = 5;
+var points = 1000;
+
+var si;
+var p = parseInt("" + points);
 
 var tab_on_enter = function (tab) {
     tab.element.classList.add("tab-active");
@@ -67,6 +73,20 @@ var set_tab = (t) => {
     }
 
     tab_index = t;
+}
+
+var populate_points = function() {
+    clearInterval(si);
+    points = p;
+    p = parseInt("" + points);
+    points = 0;
+    si = setInterval((() => {
+        if (points < p) points += p/50 + 1;
+        else {
+            points = p;
+            clearInterval(si);
+        }
+    }), 10);
 }
 
 setInterval(update, 0);
