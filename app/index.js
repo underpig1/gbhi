@@ -21,6 +21,16 @@ const tabs = [
         },
         on_leave: () => corner.style.width = "115px",
         update: () => document.getElementById("point-count").innerText = ("000" + points).slice(-3 - parseInt(points / 1000))
+    },
+    {
+        name: "profile",
+        element: document.getElementById("profile"),
+        icon: document.getElementById("profile-icon"),
+        header: null,
+        content: document.getElementById("profile-main"),
+        on_enter: () => {},
+        on_leave: () => {},
+        update: () => {}
     }
 ];
 
@@ -28,6 +38,7 @@ const corner = document.getElementById("corner");
 const nav = document.getElementById("nav");
 const topbar = document.getElementById("topbar");
 const nav_select = document.getElementById("nav-select");
+const splash = document.getElementById("splash");
 
 var tab_index = 0;
 var new_tab_index = 0;
@@ -35,6 +46,7 @@ var points = 1000;
 
 var si;
 var p = parseInt("" + points);
+var sc_prev = 0;
 
 var tab_on_enter = function (tab) {
     tab.element.classList.add("tab-active");
@@ -47,6 +59,8 @@ var tab_on_enter = function (tab) {
         tab.element.style.transition = prev_transition;
         tab.element.style.transform = "translateX(0)";
     }, 1);
+
+    tab.content.scrollTo(0, 0);
 }
 
 var nav_on_enter = function (t) {
@@ -62,7 +76,8 @@ var tab_on_leave = function (tab) {
 
 var set_tab = (t) => {
     var old_tab = tabs[tab_index];
-    var new_tab = tabs[t];
+    new_tab_index = t;
+    var new_tab = tabs[new_tab_index];
 
     if (t != tab_index) {
         tab_on_leave(old_tab);
@@ -89,17 +104,25 @@ var populate_points = function() {
     }), 10);
 }
 
+setTimeout(() => splash.style.display = "none", 1000);
+
 setInterval(update, 0);
 
 function update() {
     var content = tabs[tab_index].content;
     var tab = tabs[tab_index];
+    var scroll_y = content.scrollTop;
 
-    tab.header.style.transform = `translateY(${-content.scrollTop / 2}px)`;
-    tab.header.style.opacity = (screen.height / 2 - content.scrollTop) / screen.height * 2;
-    corner.style.transform = `translateY(${-content.scrollTop / 2}px)`;
-    nav.style.transform = `translateY(${content.scrollTop > 0 ? content.scrollTop * 2 / 3 : 0}px)`;
-    topbar.style.transform = `translateY(${-content.scrollTop}px)`;
+    if (sc_prev != scroll_y) {
+        if (tab.header) {
+            tab.header.style.transform = `translateY(${-scroll_y / 2}px)`;
+            tab.header.style.opacity = (screen.height / 2 - scroll_y) / screen.height * 2;
+        }
+        corner.style.transform = `translateY(${-scroll_y / 2}px)`;
+        nav.style.transform = `translateY(${scroll_y > 0 ? scroll_y * 2 / 3 : 0}px)`;
+        topbar.style.transform = `translateY(${-scroll_y}px)`;
+    }
+    sc_prev = parseInt("" + scroll_y);
 
     tab.update();
 }

@@ -10,9 +10,11 @@
 	<link rel="stylesheet" href="/app/styles/styles.css">
 	<link rel="stylesheet" href="/app/styles/feed.css">
 	<link rel="stylesheet" href="/app/styles/rewards.css">
+	<link rel="stylesheet" href="/app/styles/profile.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2797d77adc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,6 +25,7 @@
 			<h1>Points</h1>
 			<h1 id="point-count">000</h1>
 		</div>
+		<div class="menu-bar" id="profile-icon"><img src="/app/icon/menu.svg" /></div>
 	</div>
 	<div class="tab tab-active" id="feed">
 		<div class="header" id="feed-header">
@@ -75,13 +78,44 @@
 			</div>
 		</div>
 	</div>
-	<div class="tab">
-		mo
+	<div class="tab" id="profile">
+		<div class="content" id="profile-main">
+			<div class="profile-pic"></div>
+			<h1 class="user-name">User Name</h1>
+			<h1 class="member-time">Member since <span id="member-date">10/6/16</span></h1>
+			<h1 class="user-level">2</h1>
+			<div class="profile-break"><h1>Stats</h1><span></span></div>
+			<div class="stats">
+				<div class="stat">
+					<h1>1.5K</h1>
+					<p>Lifetime Points</p>
+				</div>
+				<div class="stat">
+					<h1>10</h1>
+					<p>Campaigns</p>
+				</div>
+				<div class="stat">
+					<h1>11</h1>
+					<p>Badges</p>
+				</div>
+			</div>
+			<div class="profile-break"><h1>Badges</h1><span></span></div>
+			<div class="badges">
+				<img class="badge" src="/app/icon/home.svg" />
+				<img class="badge" src="/app/icon/home.svg" />
+			</div>
+			<div class="profile-break"><span></span></div>
+			<div class="settings">
+				<button><i class="fa-solid fa-clock-rotate-left"></i><p>Redemption History</p></button>
+				<button><i class="fa-solid fa-user"></i><p>Account Details</p></button>
+				<button><i class="fa-solid fa-money-bill"></i><p>Redeem Code</p></button>
+				<button><i class="fa-solid fa-link"></i><p>Connect Account</p></button>
+				<button style="color:red"><i class="fa-solid fa-trash-can"></i><p>Reset Account</p></button>
+			</div>
+		</div>
 	</div>
 	<div class="nav" id="nav">
-		<div id="nav-select">
-			<div class="nav-select-circle"></div>
-		</div>
+		<div id="nav-select"><div class="nav-select-circle"></div></div>
 		<img style="height:32px;" src="/app/icon/home.svg" ontouchstart="set_tab(0);" />
 		<img style="height:35px;" src="/app/icon/insights.svg" ontouchstart="set_tab(1);" />
 		<img style="height:32px;" src="/app/icon/map.svg" ontouchstart="set_tab(2);" />
