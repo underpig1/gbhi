@@ -31,6 +31,16 @@ const tabs = [
         on_enter: () => {},
         on_leave: () => {},
         update: () => {}
+    },
+    {
+        name: "campaign",
+        element: document.getElementById("campaign"),
+        icon: document.getElementById("campaign-icon"),
+        header: document.getElementById("campaign-header"),
+        content: document.getElementById("campaign-main"),
+        on_enter: () => { },
+        on_leave: () => { },
+        update: () => { }
     }
 ];
 

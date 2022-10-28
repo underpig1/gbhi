@@ -7,10 +7,11 @@
 	<title>gbhi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="/app/styles/styles.css">
-	<link rel="stylesheet" href="/app/styles/feed.css">
-	<link rel="stylesheet" href="/app/styles/rewards.css">
-	<link rel="stylesheet" href="/app/styles/profile.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/feed.css">
+	<link rel="stylesheet" href="styles/rewards.css">
+	<link rel="stylesheet" href="styles/profile.css">
+	<link rel="stylesheet" href="styles/campaign.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,6 +27,7 @@
 			<h1 id="point-count">000</h1>
 		</div>
 		<div class="menu-bar" id="profile-icon"><img src="/app/icon/menu.svg" /></div>
+		<div class="menu-bar" id="campaign-icon"><img style="height:45px;" src="/app/icon/map.svg" /></div>
 	</div>
 	<div class="tab tab-active" id="feed">
 		<div class="header" id="feed-header">
@@ -114,6 +116,36 @@
 			</div>
 		</div>
 	</div>
+	<div class="tab" id="campaign">
+		<div class="header" id="campaign-header">
+			<h1>Campaign</h1>
+		</div>
+		<div class="content" id="campaign-main">
+			<div class="campaign-item campaign-complete">
+				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<div class="campaign-container">
+					<h1 class="campaign-title">Participate in a 30-day challenge</h1>
+					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
+				</div>
+			</div>
+			<div class="campaign-item">
+				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<div class="campaign-container">
+					<h1 class="campaign-title">Score top five in a 30-day challenge</h1>
+					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
+				</div>
+			</div>
+			<div class="profile-break"><h1></h1><span></span></div>
+			<div class="campaign-item campaign-inactive">
+				<img class="campaign-lvl-req" src="/app/icon/insights.svg">
+				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<div class="campaign-container">
+					<h1 class="campaign-title">Score top five in a 30-day challenge</h1>
+					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="nav" id="nav">
 		<div id="nav-select"><div class="nav-select-circle"></div></div>
 		<img style="height:32px;" src="/app/icon/home.svg" ontouchstart="set_tab(0);" />
@@ -122,7 +154,7 @@
 		<img style="height:30px;" src="/app/icon/rewards.svg" ontouchstart="set_tab(3);" />
 		<img style="height:32px;" src="/app/icon/profile.svg" ontouchstart="set_tab(4);" />
 	</div>
-	<script src="/app/index.js"></script>
+	<script src="index.js"></script>
 </body>
 
 </html>
