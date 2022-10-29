@@ -1,10 +1,12 @@
 .home-card {
     height: 200px;
-    margin: 20px 30px;
+    margin: 30px 30px;
     padding: 20px 25px;
-    background: var(--light-blue);
     border-radius: 25px;
-    clip-path: inset(0);
+    background-size: auto 100%;
+    background-position: center center;
+    box-shadow: 0 10px 15px #00000011;
+    background-repeat: no-repeat;
 }
 
 .home-card>h1 {
@@ -14,7 +16,7 @@
 
 .home-card#link-account {
     border: 5px solid var(--dark-blue);
-    background: none;
+    background-image: url("/app/img/link-account.png");
 }
 
 .home-card#link-account>h1 {
@@ -28,9 +30,12 @@
     background: var(--light-blue);
     border-radius: 25px;
     height: 45px;
-    color: var(--gray);
+    color: var(--dark-blue);
+    outline: none;
+    border-color: transparent;
     margin-top: 25px;
     padding: 0 20px;
     font-size: 10pt;
     line-height: 25px;
+    box-shadow: 0px 5.5px 0px var(--dark-blue);
 }

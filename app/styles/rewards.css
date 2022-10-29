@@ -19,11 +19,10 @@
     height: 200px;
     width: 140px;
     margin: 10px;
-    background: white;
     border-radius: 25px;
     box-shadow: 0 10px 15px #00000011;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% auto;
 }
 
 .reward-item>.reward-price {

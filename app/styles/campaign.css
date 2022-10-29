@@ -1,3 +1,7 @@
+#campaign-main {
+    padding-top: 150px;
+}
+
 .campaign-item {
     display: flex;
     height: 125px;
@@ -7,6 +11,12 @@
     border-radius: 25px;
     box-shadow: 0 10px 15px #00000011;
     flex-direction: row;
+}
+
+.campaign-refresh-time {
+    margin-top: 5px;
+    color: var(--light-gray);
+    font-size: 15px;
 }
 
 .campaign-badge {
@@ -29,6 +39,7 @@
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    margin-left: -5px;
 }
 
 .campaign-title {
@@ -74,16 +85,16 @@
     border-color: #e0e0e0ff;
 }
 
-.campaign-inactive>*:not(.campaign-lvl-req) {
+.campaign-inactive>*:not(.campaign-inactive-icon) {
     background: none;
     filter: grayscale(1) contrast(0) brightness(1.7);
     box-shadow: none;
 }
 
-.campaign-inactive>.campaign-lvl-req {
+.campaign-inactive>.campaign-inactive-icon {
     display: block;
     position: absolute;
-    width: 50px;
+    width: 70px;
     height: auto;
     z-index: 2;
     left: 0;
@@ -98,4 +109,8 @@
     padding: 5px;
     background-clip: content-box;
     background-color: #eff7afff;
+}
+
+.campaign-reward-count {
+    color: var(--light-blue);
 }

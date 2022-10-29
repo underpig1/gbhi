@@ -1,3 +1,28 @@
+const demo_data = [
+    {
+        "username": "Demo User",
+        "id": 1000000,
+        "stats": {
+            "member_since": "10/6/16",
+            "lifetime_points": "1.5K",
+            "lifetime_campaigns": "10",
+            "lifetime_badges": "6"
+        },
+        "badges": [
+            "turtle-badge",
+            "level-2-badge",
+            "level-3-badge",
+            "level-4-badge",
+            "level-5-badge",
+            "contender-badge"
+        ],
+        "points": 1000
+    }
+]
+
+const user_id = 1000000;
+const user_data = demo_data.filter((x) => x.id == user_id)[0];
+
 const tabs = [
     {
         name: "feed",
@@ -52,7 +77,17 @@ const splash = document.getElementById("splash");
 
 var tab_index = 0;
 var new_tab_index = 0;
-var points = 1000;
+var points = 0;
+
+function update_dom() {
+    points = user_data.points;
+    document.getElementById("lifetime-points-stat").innerText = user_data.stats.lifetime_points;
+    document.getElementById("lifetime-campaigns-stat").innerText = user_data.stats.lifetime_campaigns;
+    document.getElementById("lifetime-badges-stat").innerText = user_data.stats.lifetime_badges;
+    document.getElementById("member-date").innerText = user_data.stats.member_since;
+}
+
+update_dom();
 
 var si;
 var p = parseInt("" + points);

@@ -30,16 +30,17 @@
 .user-level {
     position: absolute;
     right: 40px;
-    top: 190px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    background-image: url("/app/icon/map.svg");
+    top: 170px;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    background-image: url("/app/icon/level-5.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     font-size: 16pt;
     text-align: center;
+    color: #d0b060ff;
 }
 
 .profile-break {
@@ -94,8 +95,8 @@
 }
 
 .badge {
-    width: 30px;
-    margin: 12px;
+    height: 50px;
+    margin: 8px;
 }
 
 .settings {

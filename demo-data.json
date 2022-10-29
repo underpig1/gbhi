@@ -1,0 +1,21 @@
+[
+    {
+        "username": "Demo User",
+        "id": 1000000,
+        "stats": {
+            "member_since": "10/6/16",
+            "lifetime_points": "1.5K",
+            "lifetime_campaigns": "10",
+            "lifetime_badges": "6"
+        },
+        "badges": [
+            "turtle-badge",
+            "level-2-badge",
+            "level-3-badge",
+            "level-4-badge",
+            "level-5-badge",
+            "contender-badge"
+        ],
+        "points": 1000
+    }
+]
