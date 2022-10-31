@@ -4,4 +4,4 @@ Note that this demo version of GBHI is for safety reasons entirely local and dis
 
 ---- This version is specifically meant for demo purposes ----
 
-All svg and png images and icons in this project are created by me.
+All svg and png images and icons in this project are created and owned by me.
