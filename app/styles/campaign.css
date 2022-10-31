@@ -13,12 +13,6 @@
     flex-direction: row;
 }
 
-.campaign-refresh-time {
-    margin-top: 5px;
-    color: var(--light-gray);
-    font-size: 15px;
-}
-
 .campaign-badge {
     height: 100%;
     width: 100px;

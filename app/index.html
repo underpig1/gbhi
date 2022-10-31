@@ -7,11 +7,12 @@
 	<title>gbhi</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="/app/styles/styles.css">
-	<link rel="stylesheet" href="/app/styles/feed.css">
-	<link rel="stylesheet" href="/app/styles/rewards.css">
-	<link rel="stylesheet" href="/app/styles/profile.css">
-	<link rel="stylesheet" href="/app/styles/campaign.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/feed.css">
+	<link rel="stylesheet" href="styles/rewards.css">
+	<link rel="stylesheet" href="styles/profile.css">
+	<link rel="stylesheet" href="styles/campaign.css">
+	<link rel="stylesheet" href="styles/insights.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,13 +22,14 @@
 <body>
 	<div id="topbar"></div>
 	<div class="corner" id="corner">
-		<div class="menu-bar" style="opacity:1;" id="feed-icon"><img src="/app/icon/home.svg" /></div>
+		<div class="menu-bar" style="opacity:1;" id="feed-icon"><img src="icon/home.svg" /></div>
 		<div class="menu-bar" id="rewards-icon">
 			<h1>Points</h1>
 			<h1 id="point-count">000</h1>
 		</div>
-		<div class="menu-bar" id="profile-icon"><img src="/app/icon/menu.svg" /></div>
-		<div class="menu-bar" id="campaign-icon"><img style="height:45px;" src="/app/icon/map.svg" /></div>
+		<div class="menu-bar" id="profile-icon"><img src="icon/menu.svg" /></div>
+		<div class="menu-bar" id="campaign-icon"><img style="height:45px;" src="icon/map.svg" /></div>
+		<div class="menu-bar" id="insights-icon"><img style="height:45px;" src="icon/insights.svg" /></div>
 	</div>
 	<div class="tab tab-active" id="feed">
 		<div class="header" id="feed-header">
@@ -38,31 +40,28 @@
 				<h1>Link up your<br />account to start<br />earning today</h1>
 				<button>Take me there!</button>
 			</div>
-			<div style="background-image:url('/app/img/energy-challenge.png');" class="home-card"></div>
-			<div style="background-image:url('/app/img/carbon-footprint.png');" class="home-card"></div>
-			<div style="background-image:url('/app/img/beach-cleanup.png');" class="home-card"></div>
+			<div style="background-image:url('img/energy-challenge.png');" class="home-card"></div>
+			<div style="background-image:url('img/carbon-footprint.png');" class="home-card"></div>
+			<div style="background-image:url('img/beach-cleanup.png');" class="home-card"></div>
+			<div style="background-image:url('img/local-business.png');" class="home-card"></div>
+			<h1 class="footer">Check back later for more!</h1>
 		</div>
 	</div>
 	<div class="tab" id="rewards">
 		<div class="header" id="rewards-header">
 			<h1>Rewards</h1>
+			<h1 class="refresh-time">Refreshes in: <span id="rewards-refresh-time">10:32</span></h1>
 		</div>
 		<div class="content" id="rewards-main">
-			<div class="reward-item" style="background-image:url('/app/img/water-bottle-reward.png')"></div>
-			<div class="reward-item" style="background-image:url('/app/img/amazon-reward.png')"></div>
-			<div class="reward-item item-long" style="background-image:url('/app/img/gift-card-reward.png')"></div>
-			<div class="reward-item">
-				<h1 class="reward-price">1500pts</h1>
-				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
-			</div>
-			<div class="reward-item">
-				<h1 class="reward-price">1500pts</h1>
-				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
-			</div>
-			<div class="reward-item item-long">
-				<h1 class="reward-title">Recycled Water<br />Bottle</h1>
-				<h1 class="reward-price">1500pts</h1>
-			</div>
+			<div class="reward-item" style="background-image:url('img/water-bottle-reward.png')"></div>
+			<div class="reward-item" style="background-image:url('img/red-amazon-reward.png')"></div>
+			<div class="reward-item item-long" style="background-image:url('img/gift-card-reward.png')"></div>
+			<div class="reward-item" style="background-image:url('img/google-reward.png')"></div>
+			<div class="reward-item" style="background-image:url('img/green-amazon-reward.png')"></div>
+			<div class="reward-item" style="background-image:url('img/apple-reward.png')"></div>
+			<div class="reward-item" style="background-image:url('img/steam-reward.png')"></div>
+			<div class="reward-item item-long" style="background-image:url('img/local-business-reward.png')"></div>
+			<h1 class="footer">More items coming soon!</h1>
 		</div>
 	</div>
 	<div class="tab" id="profile">
@@ -88,12 +87,12 @@
 			</div>
 			<div class="profile-break"><h1>Badges</h1><span></span></div>
 			<div class="badges">
-				<img class="badge" src="/app/icon/turtle-badge.png" />
-				<img class="badge" src="/app/icon/level-2-badge.png" />
-				<img class="badge" src="/app/icon/level-3-badge.png" />
-				<img class="badge" src="/app/icon/level-4-badge.png" />
-				<img class="badge" src="/app/icon/level-5-badge.png" />
-				<img class="badge" src="/app/icon/contender-badge.png" />
+				<img class="badge" src="icon/turtle-badge.png" />
+				<img class="badge" src="icon/level-2-badge.png" />
+				<img class="badge" src="icon/level-3-badge.png" />
+				<img class="badge" src="icon/level-4-badge.png" />
+				<img class="badge" src="icon/level-5-badge.png" />
+				<img class="badge" src="icon/contender-badge.png" />
 			</div>
 			<div class="profile-break"><span></span></div>
 			<div class="settings">
@@ -108,25 +107,25 @@
 	<div class="tab" id="campaign">
 		<div class="header" id="campaign-header">
 			<h1>Campaign</h1>
-			<h1 class="campaign-refresh-time">Refreshes in: <span id="campaign-refresh-time">10:32</span></h1>
+			<h1 class="refresh-time">Refreshes in: <span id="campaign-refresh-time">10:32</span></h1>
 		</div>
 		<div class="content" id="campaign-main">
 			<div class="campaign-item campaign-complete">
-				<div class="campaign-badge"><img src="/app/icon/contender-badge.png"></div>
+				<div class="campaign-badge"><img src="icon/contender-badge.png"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Participate in a 30-day challenge</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
 				</div>
 			</div>
 			<div class="campaign-item">
-				<div class="campaign-badge"><img src="/app/icon/turtle-badge.png"></div>
+				<div class="campaign-badge"><img src="icon/turtle-badge.png"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Score top five in a campaign <span class="campaign-reward-count">+100</span></h1>
 					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
 				</div>
 			</div>
 			<div class="campaign-item">
-				<div class="campaign-badge"><img src="/app/icon/contender-badge.png"></div>
+				<div class="campaign-badge"><img src="icon/contender-badge.png"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 30 challenges <span class="campaign-reward-count">+100</span></h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -136,16 +135,16 @@
 			</div>
 			<div class="profile-break"><h1></h1><span></span></div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span><h1>0/1</h1></span>
 				</div>
 			</div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -154,8 +153,8 @@
 				</div>
 			</div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -164,8 +163,8 @@
 				</div>
 			</div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -174,8 +173,8 @@
 				</div>
 			</div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -184,8 +183,8 @@
 				</div>
 			</div>
 			<div class="campaign-item campaign-inactive">
-				<img class="campaign-inactive-icon" src="/app/icon/inactive-icon.png">
-				<div class="campaign-badge"><img src="/app/icon/insights.svg"></div>
+				<img class="campaign-inactive-icon" src="icon/inactive-icon.png">
+				<div class="campaign-badge"><img src="icon/insights.svg"></div>
 				<div class="campaign-container">
 					<h1 class="campaign-title">Complete 10 campaigns</h1>
 					<span class="campaign-status"><span class="campaign-progress"></span>
@@ -195,15 +194,47 @@
 			</div>
 		</div>
 	</div>
+	<div class="tab" id="insights">
+		<div class="header" id="insights-header">
+			<h1>Insights</h1>
+		</div>
+		<div class="content" id="insights-main">
+			<div class="insights-break"><h1>Past 24hrs</h1></div>
+			<h1 class="insights-stat stat-up" id="day-energy-stat">27kWh <span class="insight" id="day-energy-insight">15%</span></h1>
+			<div class="insights-break" style="margin-top:-10px;"><h1>Past Week</h1></div>
+			<h1 class="insights-stat stat-down"><span id="week-energy-stat">220kWh</span> <span class="insight" id="week-energy-insight">12%</span></h1>
+			<div class="insights-break"><h1>Monthly Energy Usage</h1><span></span></div>
+			<div class="insights-chart">
+				<canvas height="200" id="monthly-energy-usage"></canvas>
+			</div>
+			<div class="insights-break">
+				<h1>State Energy Consumption</h1><span></span>
+			</div>
+			<div class="insights-chart">
+				<canvas style="position:relative; top:-15px;" height="200" id="island-energy-sources"></canvas>
+			</div>
+			<div style="margin-top:15px;" class="insights-break">
+				<h1>Energy Comparison</h1><span></span>
+			</div>
+			<div class="insights-chart">
+				<canvas height="200" id="energy-comparison"></canvas>
+			</div>
+			<h1 style="margin-top:-20px;" class="footer">Keep up the good work!</h1>
+		</div>
+	</div>
 	<div class="nav" id="nav">
 		<div id="nav-select"><div class="nav-select-circle"></div></div>
-		<img style="height:32px;" src="/app/icon/home.svg" ontouchstart="set_tab(0);" />
-		<img style="height:35px;" src="/app/icon/insights.svg" ontouchstart="set_tab(1);" />
-		<img style="height:32px;" src="/app/icon/map.svg" ontouchstart="set_tab(2);" />
-		<img style="height:30px;" src="/app/icon/rewards.svg" ontouchstart="set_tab(3);" />
-		<img style="height:32px;" src="/app/icon/profile.svg" ontouchstart="set_tab(4);" />
+		<img style="height:32px;" src="icon/home.svg" ontouchstart="set_tab(0);" />
+		<img style="height:35px;" src="icon/insights.svg" ontouchstart="set_tab(1);" />
+		<img style="height:32px;" src="icon/map.svg" ontouchstart="set_tab(2);" />
+		<img style="height:30px;" src="icon/rewards.svg" ontouchstart="set_tab(3);" />
+		<img style="height:32px;" src="icon/profile.svg" ontouchstart="set_tab(4);" />
 	</div>
-	<script src="/app/index.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+   	<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+	<script src="scripts/index.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="scripts/insights.js"></script>
 </body>
 
 </html>

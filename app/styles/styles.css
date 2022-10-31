@@ -43,6 +43,12 @@ body {
     transform: translateX(200%);
 }
 
+.refresh-time {
+    margin-top: 5px;
+    color: var(--light-gray);
+    font-size: 15px;
+}
+
 .tab-active {
     transform: translateX(0);
 }
@@ -160,6 +166,14 @@ h1 {
     font-size: 12pt;
     left: -90px;
     top: -15px;
+}
+
+.footer {
+    width: 50%;
+    text-align: center;
+    color: var(--light-gray);
+    margin: 15px auto 40px auto;
+    font-size: 10pt;
 }
 
 /* #splash {

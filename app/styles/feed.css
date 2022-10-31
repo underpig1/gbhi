@@ -16,7 +16,7 @@
 
 .home-card#link-account {
     border: 5px solid var(--dark-blue);
-    background-image: url("/app/img/link-account.png");
+    background-image: url("img/link-account.png");
 }
 
 .home-card#link-account>h1 {

@@ -35,6 +35,26 @@ const tabs = [
         update: () => { }
     },
     {
+        name: "insights",
+        element: document.getElementById("insights"),
+        icon: document.getElementById("insights-icon"),
+        header: document.getElementById("insights-header"),
+        content: document.getElementById("insights-main"),
+        on_enter: () => { },
+        on_leave: () => { },
+        update: () => { }
+    },
+    {
+        name: "campaign",
+        element: document.getElementById("campaign"),
+        icon: document.getElementById("campaign-icon"),
+        header: document.getElementById("campaign-header"),
+        content: document.getElementById("campaign-main"),
+        on_enter: () => { },
+        on_leave: () => { },
+        update: () => { }
+    },
+    {
         name: "rewards",
         element: document.getElementById("rewards"),
         icon: document.getElementById("rewards-icon"),
@@ -56,16 +76,6 @@ const tabs = [
         on_enter: () => {},
         on_leave: () => {},
         update: () => {}
-    },
-    {
-        name: "campaign",
-        element: document.getElementById("campaign"),
-        icon: document.getElementById("campaign-icon"),
-        header: document.getElementById("campaign-header"),
-        content: document.getElementById("campaign-main"),
-        on_enter: () => { },
-        on_leave: () => { },
-        update: () => { }
     }
 ];
 
@@ -149,7 +159,7 @@ var populate_points = function() {
     }), 10);
 }
 
-setTimeout(() => splash.style.display = "none", 1000);
+// setTimeout(() => splash.style.display = "none", 1000);
 
 setInterval(update, 0);
 
